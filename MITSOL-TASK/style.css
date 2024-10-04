@@ -1,0 +1,165 @@
+:root {
+    --apexloads-red: #FF0000;
+    --apexloads-dark: #1A1A1A;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: var(--apexloads-red);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.navbar-dark {
+    background-color: var(--apexloads-dark);
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--apexloads-red);
+}
+
+.hero {
+    background-image: url('images/image\ 5.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    position: relative;
+    display: flex; /* Add Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text inside */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.services {
+    background-color: var(--apexloads-dark);
+    color: white;
+    padding: 4rem 1rem; /* Adjusted for smaller screens */
+}
+
+.card {
+    background-color: #2A2A2A;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%; /* Ensures image doesn't overflow */
+}
+
+.btn-get-started {
+    background-color: var(--apexloads-red);
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-get-started:hover {
+    background-color: #D00000;
+    color: white;
+}
+
+.why-choose-apexloads {
+    background-color: #d62e2e;
+}
+
+.why-choose-apexloads .card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+}
+
+.why-choose-apexloads h2 {
+    font-weight: bold;
+}
+
+.why-choose-apexloads .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.why-choose-apexloads .card-text {
+    font-size: 1rem;
+}
+
+.why-choose-apexloads .container {
+    max-width: 1100px;
+}
+
+footer {
+    padding: 30px 1rem; 
+}
+
+.footer-logo {
+    width: 150px; 
+}
+
+.back-to-top {
+    position: fixed; /* Make it fixed at bottom right */
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Initially hidden */
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: #ff5c5c; /* Color for the back to top icon */
+}
+
+/* Additional Media Queries */
+@media (max-width: 576px) {
+    .top-bar {
+        font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+    
+    .hero h1 {
+        font-size: 2rem; /* Further reduce for very small screens */
+    }
+    
+    .services {
+        padding: 2rem 0; /* Reduced padding */
+    }
+
+    .card {
+        margin-bottom: 1rem; /* Reduce margin for cards */
+    }
+
+    .footer-logo {
+        width: 100px; /* Smaller logo on mobile */
+    }
+}
